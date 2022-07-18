@@ -21,14 +21,15 @@
 3. Download the LRA datasets for ListOps and Retrieval, and fix the "DATA_PATH" variables in retrieval/train.py and listops/train.py to pint to the folder containing the tsv files.
 4. For Fastfood methods to work, one additionally needs to install [cuda kernels for fastfood](https://github.com/HazyResearch/structured-nets/tree/master/pytorch/structure/hadamard_cuda)
 5. Experiments can now be run using `<experiment_name>/train.py <attention_type>` where "experiment name is one of "text", "retrieval" or "listops" and attention type is:
-|Attention Name in Paper|attention_type to pass to code|
-|-----------------------|------------------------------|
-|Softmax Transformer|softmax|
-|GMM-PRF|mix-gauss-positive|
-|GMM-RKS|mix-gauss-fourier|
-|FastFood-RKS|fsgb-fastfood|
-|FastFood-PRF|fsgb-positive-fastfood|
-|Generator-RKS|generative-fourier|
-|Generator-PRF|generative-positive|
+
+| Attention Name in Paper | attention_type to pass to code |
+| ----------------------- | ------------------------------ |
+| Softmax Transformer | softmax |
+| GMM-PRF | mix-gauss-positive |
+| GMM-RKS | mix-gauss-fourier |
+| FastFood-RKS | fsgb-fastfood |
+| FastFood-PRF | fsgb-positive-fastfood |
+| Generator-RKS | generative-fourier |
+| Generator-PRF | generative-positive |
 
 For text experiments, the maximum length can additionally be passed as the second parameter to replicate figure 4 from our table.
